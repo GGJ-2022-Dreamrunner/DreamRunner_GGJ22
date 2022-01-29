@@ -343,10 +343,6 @@ namespace ThirdPersonPlayer
 		/// </summary>
 		public void GroundMove()
 		{
-			if (InHelper.ForwardMove > .9f)
-            {
-				print("yo");
-            }
 
 			//Our desired direction
 			Vector3 WishDir;

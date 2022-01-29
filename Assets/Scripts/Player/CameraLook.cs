@@ -19,6 +19,7 @@ namespace ThirdPersonPlayer
 
         private void Update()
         {
+
             transform.Rotate(Vector3.right, input.y * sensitivity * Time.deltaTime, Space.Self);
             transform.Rotate(Vector3.up, input.x * sensitivity * Time.deltaTime, Space.World);
 
@@ -27,6 +28,7 @@ namespace ThirdPersonPlayer
                 eulerAngles.y,
                 eulerAngles.z);
             transform.eulerAngles = eulerAngles;
+            transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0f);
         }
 
         void OnLook(InputValue val)
