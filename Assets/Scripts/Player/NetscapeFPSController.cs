@@ -271,13 +271,18 @@ namespace Netscape
 		/// <summary>
 		/// Handles the input for if we want to jump or not
 		/// </summary>
-		private void QueueJump()
-		{
-			if (Input.GetButtonDown("Jump") && !WishJump)
-				WishJump = true;
-			else
-				WishJump = false;
-		}
+		//private void QueueJump()
+		//{
+		//	if (Input.GetButtonDown("Jump") && !WishJump)
+		//		WishJump = true;
+		//	else
+		//		WishJump = false;
+		//}
+
+		void OnJump(InputValue val)
+        {
+			WishJump = true;
+        }
 
 
 		/// <summary>
@@ -286,7 +291,7 @@ namespace Netscape
 		public void HandleController()
 		{
 			//Check if we wanna jump
-			QueueJump();
+			//QueueJump();
 			//Handle our grappling
 			//HandleMovementComponents();
 			//Pick the control method based on whether or not the controller is grounded.
@@ -343,6 +348,11 @@ namespace Netscape
 		/// </summary>
 		public void GroundMove()
 		{
+			if (InHelper.ForwardMove > .9f)
+            {
+				print("yo");
+            }
+
 			//Our desired direction
 			Vector3 WishDir;
 
@@ -368,7 +378,7 @@ namespace Netscape
 
 			//Set the wish dir to the values from InHelper, set in the above SetMovementDir function
 			WishDir = new Vector3(InHelper.RightMove, 0, InHelper.ForwardMove);
-			WishDir = InHelper.RightMove * Cam.transform.right + InHelper.ForwardMove * Cam.transform.forward;
+			WishDir = InHelper.RightMove * Cam.transform.right + InHelper.ForwardMove * new Vector3(Cam.transform.forward.x, 0, Cam.transform.forward.z);
 			//Convert the wish direction to a worldspace vector
 			WishDir = transform.TransformDirection(WishDir);
 			//Normalize this direction
@@ -379,7 +389,7 @@ namespace Netscape
 			//Store the magnitude of our desired direction
 			var wishSpeed = WishDir.magnitude;
 			//Multiply the wish Speed by the move speed or crouch speed every frame.
-			wishSpeed *= (Controller.height != UncrouchedHeight) ? CrouchSpeed : MoveSpeed;
+			wishSpeed *= MoveSpeed;
 
 
 			//Accelerate up to the given speed in this given direction
@@ -489,7 +499,8 @@ namespace Netscape
 			//SetMovementDir();
 
 			//Set our wish direction based on the given input
-			WishDir = new Vector3(InHelper.RightMove, 0, InHelper.ForwardMove);
+			//WishDir = new Vector3(InHelper.RightMove, 0, InHelper.ForwardMove);
+			WishDir = InHelper.RightMove * Cam.transform.right + InHelper.ForwardMove * Cam.transform.forward;
 			//Transform it to world space
 			WishDir = transform.TransformDirection(WishDir);
 
@@ -661,16 +672,15 @@ namespace Netscape
 		/// </summary>
 		public void HandleRotation()
 		{
-			float x = Input.GetAxisRaw("Mouse X") * 2f;
-			float y = Input.GetAxisRaw("Mouse Y") * 2f;
-			CamHelper.Rotate(x, y);
+            //float x = Input.GetAxisRaw("Mouse X") * 2f;
+            //float y = Input.GetAxisRaw("Mouse Y") * 2f;
+            //CamHelper.Rotate(x, y);
 
-			//Set the rotation of the player
-			transform.localRotation *= Quaternion.Euler(0, CamHelper.rotX, 0);
+            ////Set the rotation of the player
+            //transform.localRotation *= Quaternion.Euler(0, CamHelper.rotX, 0);
 
-			//Updating the cursor lock state to be locked
-			Cursor.lockState = CursorLockMode.Locked;
-		}
+            ////Updating the cursor lock state to be locked
+        }
 
 		/// <summary>
 		/// Sets variables that prevent us from sticking to the ground momentarily.
