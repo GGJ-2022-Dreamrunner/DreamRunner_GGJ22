@@ -932,6 +932,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4156664699775682467, guid: cc0d6e3e74062b24e82debe312cbd7fb, type: 3}
+      propertyPath: maxUp
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156664699775682467, guid: cc0d6e3e74062b24e82debe312cbd7fb, type: 3}
+      propertyPath: sensitivity
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4156664699775682476, guid: cc0d6e3e74062b24e82debe312cbd7fb, type: 3}
       propertyPath: m_Layer
       value: 3

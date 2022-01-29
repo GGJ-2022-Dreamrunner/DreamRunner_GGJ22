@@ -5,7 +5,7 @@ using System.Linq;
 using Engine.Engine_Timer;
 using UnityEngine.InputSystem;
 
-namespace Netscape
+namespace ThirdPersonPlayer
 {
 	/// <summary>
 	/// This is a struct containing some information about the camera. Notable its x and y rotation
@@ -225,11 +225,6 @@ namespace Netscape
 		/// A boolean for whether or not we want to apply the stick to ground force.
 		/// </summary>
 		private bool StickToGround;
-
-		/// <summary>
-		/// A boolean for whether or not we want to supress the ability to jump this frame.
-		/// </summary>
-		private bool SuppressJump;
 
 		#endregion
 
@@ -691,20 +686,11 @@ namespace Netscape
 		}
 
 		/// <summary>
-		/// Sets variables that prevent us from sticking to the ground momentarily.
-		/// </summary>
-		public void SupressJump()
-		{
-			SuppressJump = true;
-		}
-
-		/// <summary>
 		/// Called at the end of the frame to reset any variables that supress things like the stick to ground force or the ability to jump
 		/// </summary>
 		public void ResetProperties()
 		{
 			StickToGround = true;
-			SuppressJump = false;
 		}
 
 		/// <summary>
