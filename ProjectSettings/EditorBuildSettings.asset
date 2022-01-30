@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/realworld start.unity
+    guid: e0ad2631202eaaf4c87d28e46989cc8b
+  - enabled: 1
     path: Assets/Scenes/cake.unity
     guid: d53077b94930fd24084aa303109bcc7b
   - enabled: 1

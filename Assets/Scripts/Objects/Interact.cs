@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class Interact : MonoBehaviour
 {
-    [HideInInspector] public CurrentVolume c = null;
+     public CurrentVolume c = null;
     ParticleSystem sys;
 
     [SerializeField] Material promptGamepad, promptKB;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.InputSystem;
 public class CurrentVolume : MonoBehaviour
 {
     public UnityEvent onInteract;
@@ -25,12 +25,16 @@ public class CurrentVolume : MonoBehaviour
 
     public void Interact()
     {
-        print("aaa");
         onInteract.Invoke();
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawIcon(GetComponent<Collider>().bounds.center, "goal.png");
+    }
+
+    public void OnConversationEnd()
+    {
+        FindObjectOfType<PlayerInput>().ActivateInput();
     }
 }

@@ -15,7 +15,6 @@ public class EndGame : MonoBehaviour
 
     IEnumerator FadeAndTransition()
     {
-        yield return new WaitForSeconds(3);
         while (fadeCanvas.color.a <= 1f)
         {
             fadeCanvas.color = new Color(fadeCanvas.color.r, fadeCanvas.color.g, fadeCanvas.color.b, fadeCanvas.color.a + .025f);

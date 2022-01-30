@@ -1975,6 +1975,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 4e605b82-ef3f-4c04-9fe9-2c9b0dee9aec
+        type: 0
+        typeString: 
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -1991,7 +1995,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 31
-        y: 226
+        y: 225
         width: 160
         height: 30
     entryGroups: []
