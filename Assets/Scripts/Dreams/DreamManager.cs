@@ -32,4 +32,10 @@ class DreamManager : MonoBehaviour
         f = dreamComplete;
     }
 
+    public void ExitDream()
+    {
+        //wait, do the fade and exit
+
+    }
+
 }
