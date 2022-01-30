@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 class DreamManager : MonoBehaviour
 {
     public bool dreamLeavable = false, dreamComplete = false;
 
     public Dream dr;
+
+    public Image fadeCanvas;
 
     public void DeliverItem(item item)
     {
@@ -34,8 +38,21 @@ class DreamManager : MonoBehaviour
 
     public void ExitDream()
     {
-        //wait, do the fade and exit
+        StartCoroutine(FadeAndTransition());
 
+    }
+
+    IEnumerator FadeAndTransition()
+    {
+        yield return new WaitForSeconds(3);
+        while (fadeCanvas.color.a <= 1f)
+        {
+            fadeCanvas.color = new Color(fadeCanvas.color.r, fadeCanvas.color.g, fadeCanvas.color.b, fadeCanvas.color.a + .025f);
+            yield return new WaitForEndOfFrame();
+            print("in loop");
+        }
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
