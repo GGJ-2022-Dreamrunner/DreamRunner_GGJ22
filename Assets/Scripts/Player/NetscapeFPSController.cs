@@ -40,6 +40,9 @@ namespace ThirdPersonPlayer
 		public Vector3 InitialPosition;
 	}
 
+	
+
+
 	/// <summary>
 	/// This is simply a struct used to hold information about our input. Used purely for organizational purposes.
 	/// </summary>
@@ -52,6 +55,7 @@ namespace ThirdPersonPlayer
 
 	public class NetscapeFPSController : MonoBehaviour
 	{
+		public Animator animator;
 		#region Public Helpers
 		/// <summary>
 		/// Reference to the player camera
@@ -277,6 +281,7 @@ namespace ThirdPersonPlayer
 		void OnJump(InputValue val)
         {
 			WishJump = true;
+			animator.SetTrigger("Jump");
         }
 
 
@@ -607,6 +612,8 @@ namespace ThirdPersonPlayer
         {
 			InHelper.ForwardMove = val.Get<Vector2>().y;
 			InHelper.RightMove = val.Get<Vector2>().x;
+
+			animator.SetFloat("Speed", InHelper.ForwardMove + InHelper.RightMove);
 		}
 
 		/// <summary>
