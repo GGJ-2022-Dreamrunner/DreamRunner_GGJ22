@@ -598,7 +598,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.94000006
   - id: 2
     fields:
     - title: Title
@@ -902,6 +902,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: f0d251a5-01c9-47b9-ad11-9ed2dc54a5c9
+        type: 0
+        typeString: 
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -917,7 +921,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 23
+        x: 23.970871
         y: 330
         width: 160
         height: 30
@@ -1008,6 +1012,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: d6fc025b-ba56-4c7e-9548-df61c60f79c6
+        type: 0
+        typeString: 
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1020,16 +1028,28 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
-        x: 214
+        x: 214.97086
         y: 326
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 19.034554, y: 22.956612}
+    canvasZoom: 1.03
   - id: 3
     fields:
     - title: Title
@@ -1550,6 +1570,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 84178edf-5a8d-4e60-a66d-6bb1d280f434
+        type: 0
+        typeString: 
       conversationID: 3
       isRoot: 0
       isGroup: 0
@@ -1597,6 +1621,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 30affefb-f722-41a8-98c4-8c46ab3e2755
         type: 0
         typeString: 
       conversationID: 3
@@ -1973,6 +2001,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 4fefd3ff-4c2d-4b2b-abf1-f2f42a453a2d
         type: 0
         typeString: 
       conversationID: 4
@@ -2462,6 +2494,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: c7198d1c-70ad-4fd9-900b-1a0efc21d1dd
+        type: 0
+        typeString: 
       conversationID: 5
       isRoot: 0
       isGroup: 0
@@ -2478,7 +2514,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 28.495483
-        y: 387.19852
+        y: 390.4952
         width: 160
         height: 30
     entryGroups: []
@@ -2836,6 +2872,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: a283b74d-1d18-452f-92cc-523c4f152c56
         type: 0
         typeString: 
       conversationID: 6
@@ -3324,6 +3364,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 782c18a5-8599-4fe7-a157-3fe652bf5aa9
+        type: 0
+        typeString: 
       conversationID: 7
       isRoot: 0
       isGroup: 0
@@ -3336,7 +3380,19 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 30
@@ -3812,6 +3868,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: abf9dd98-f92f-486a-a820-ddf545602c74
+        type: 0
+        typeString: 
       conversationID: 8
       isRoot: 0
       isGroup: 0
@@ -3824,7 +3884,19 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 30
@@ -3832,8 +3904,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0.42977762}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.9100001
   - id: 9
     fields:
     - title: Title
@@ -4310,6 +4382,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 011df092-db5c-4fcb-b82c-8e1c579c0d9c
+        type: 0
+        typeString: 
       conversationID: 9
       isRoot: 0
       isGroup: 0
@@ -4326,7 +4402,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 4.248871
-        y: 420.72015
+        y: 421.89664
         width: 160
         height: 30
     - id: 8
@@ -4415,6 +4491,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 991256fa-b992-4642-9796-e326eb2fbebd
+        type: 0
+        typeString: 
       conversationID: 9
       isRoot: 0
       isGroup: 0
@@ -4435,8 +4515,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 3.6484663, y: 266.77896}
+    canvasZoom: 1.06
   syncInfo:
     syncActors: 0
     syncItems: 0
