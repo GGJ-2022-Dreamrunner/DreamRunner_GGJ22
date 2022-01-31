@@ -283,15 +283,71 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: Alert
+      value: DR Name
       type: 0
       typeString: 
     - title: Initial Value
-      value: 
+      value: Nora
       type: 0
       typeString: CustomFieldType_Text
     - title: Description
-      value: 
+      value: The chosen name of the dreamrunner
+      type: 0
+      typeString: 
+  - id: 2
+    fields:
+    - title: Name
+      value: Pronoun Subject
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: they
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: E.G "they are cool"
+      type: 0
+      typeString: 
+  - id: 3
+    fields:
+    - title: Name
+      value: Pronoun posessive
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: Their
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: E.G "It's theirs"
+      type: 0
+      typeString: 
+  - id: 4
+    fields:
+    - title: Name
+      value: Pronoun Reflexive
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: Themselves
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: E.G. "They imagine themselves a princess"
+      type: 0
+      typeString: 
+  - id: 5
+    fields:
+    - title: Name
+      value: Object Pronouns
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: Them
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: E.G. "Do you know them"
       type: 0
       typeString: 
   conversations:

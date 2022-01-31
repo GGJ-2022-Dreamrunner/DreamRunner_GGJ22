@@ -265,6 +265,8 @@ namespace ThirdPersonPlayer
 			HandleRotation();
 			HandleController();
 			ResetProperties();
+			
+			animator.SetBool("isJumping", !Controller.isGrounded);
 		}
 
 		/// <summary>
@@ -281,7 +283,6 @@ namespace ThirdPersonPlayer
 		void OnJump(InputValue val)
         {
 			WishJump = true;
-			animator.SetTrigger("Jump");
         }
 
 
@@ -613,7 +614,7 @@ namespace ThirdPersonPlayer
 			InHelper.ForwardMove = val.Get<Vector2>().y;
 			InHelper.RightMove = val.Get<Vector2>().x;
 
-			animator.SetFloat("Speed", InHelper.ForwardMove + InHelper.RightMove);
+			animator.SetFloat("Speed", Mathf.Abs(InHelper.ForwardMove) + Mathf.Abs(InHelper.RightMove));
 		}
 
 		/// <summary>
