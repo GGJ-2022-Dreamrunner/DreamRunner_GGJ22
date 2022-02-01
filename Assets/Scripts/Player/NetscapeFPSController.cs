@@ -266,7 +266,7 @@ namespace ThirdPersonPlayer
 			HandleController();
 			ResetProperties();
 			
-			animator.SetBool("isJumping", !Controller.isGrounded);
+			animator.SetBool("isGrounded", Controller.isGrounded);
 		}
 
 		/// <summary>
@@ -283,6 +283,7 @@ namespace ThirdPersonPlayer
 		void OnJump(InputValue val)
         {
 			WishJump = true;
+			animator.SetTrigger("Jump");
         }
 
 
@@ -723,7 +724,6 @@ namespace ThirdPersonPlayer
 			if (ColFlags == CollisionFlags.Sides)
 			{
 				var dot = Vector3.Dot(Velocity, hit.normal);
-				Debug.Log(dot);
 				if (dot < 0f)
 				{
 					Velocity -= hit.normal * dot;
