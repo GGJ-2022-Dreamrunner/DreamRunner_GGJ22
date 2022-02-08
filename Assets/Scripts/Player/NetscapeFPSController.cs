@@ -375,7 +375,7 @@ namespace ThirdPersonPlayer
 			}
 
 			//Set the wish dir to the values from InHelper, set in the above SetMovementDir function
-			WishDir = new Vector3(InHelper.RightMove, 0, InHelper.ForwardMove);
+			var wishSpeed = (new Vector3(InHelper.ForwardMove, 0, InHelper.RightMove)).magnitude;
 			WishDir = InHelper.RightMove * Cam.transform.right + InHelper.ForwardMove * new Vector3(Cam.transform.forward.x, 0, Cam.transform.forward.z);
 			//Convert the wish direction to a worldspace vector
 			WishDir = transform.TransformDirection(WishDir);
@@ -385,7 +385,8 @@ namespace ThirdPersonPlayer
 			MoveDirectionNorm = WishDir;
 
 			//Store the magnitude of our desired direction
-			var wishSpeed = WishDir.magnitude;
+			
+			
 			//Multiply the wish Speed by the move speed or crouch speed every frame.
 			wishSpeed *= MoveSpeed;
 
@@ -614,7 +615,7 @@ namespace ThirdPersonPlayer
         {
 			InHelper.ForwardMove = val.Get<Vector2>().y;
 			InHelper.RightMove = val.Get<Vector2>().x;
-
+			Vector2 e = val.Get<Vector2>();
 			animator.SetFloat("Speed", Mathf.Abs(InHelper.ForwardMove) + Mathf.Abs(InHelper.RightMove));
 		}
 

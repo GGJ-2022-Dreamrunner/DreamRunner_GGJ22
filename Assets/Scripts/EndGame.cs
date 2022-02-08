@@ -17,7 +17,7 @@ public class EndGame : MonoBehaviour
     {
         while (fadeCanvas.color.a <= 1f)
         {
-            fadeCanvas.color = new Color(fadeCanvas.color.r, fadeCanvas.color.g, fadeCanvas.color.b, fadeCanvas.color.a + .025f);
+            fadeCanvas.color = new Color(fadeCanvas.color.r, fadeCanvas.color.g, fadeCanvas.color.b, fadeCanvas.color.a + Time.deltaTime);
             yield return new WaitForEndOfFrame();
             print("in loop");
         }
